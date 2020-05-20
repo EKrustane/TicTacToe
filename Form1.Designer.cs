@@ -77,6 +77,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "D";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.Player_Click);
             // 
             // label2
             // 
