@@ -20,6 +20,7 @@ namespace TicTacToe
         private void InitializeGrid()
         {
             Grid.BackColor = Color.LightCoral;
+            Grid.CellBorderStyle = TableLayoutPanelCellBorderStyle.InsetDouble;
         }
     }
 }
