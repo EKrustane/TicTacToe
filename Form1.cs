@@ -12,6 +12,9 @@ namespace TicTacToe
 {
     public partial class Form1 : Form
     {
+        bool xPlayerTurn = true;
+        
+
         public Form1()
         {
             InitializeComponent();
@@ -23,10 +26,25 @@ namespace TicTacToe
             Grid.CellBorderStyle = TableLayoutPanelCellBorderStyle.InsetDouble;
         }
 
+        private void InitializeCells()
+        {
+            for (int i = 1;  i <= 9; i++)
+            {
+
+            }
+        }
         private void Player_Click(object sender, EventArgs e)
         {
             Label label = (Label)sender;
-            label.Text = "X";
+            if (xPlayerTurn)
+            {
+                label.Text = "x";
+            }
+            else
+            {
+                label.Text = "o";
+            }
+            xPlayerTurn = !xPlayerTurn;
         }
     }
 }
