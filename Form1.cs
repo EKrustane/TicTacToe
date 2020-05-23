@@ -27,7 +27,11 @@ namespace TicTacToe
             Grid.BackColor = Color.LightCoral;
             Grid.CellBorderStyle = TableLayoutPanelCellBorderStyle.InsetDouble;
         }
-
+        private void RestartGame()
+        {
+            InitializeCells();
+            turnCount = 0;
+        }
         private void InitializeCells()
         {
             string labelName;
@@ -79,8 +83,7 @@ namespace TicTacToe
             if(turnCount==9)
             {
                 MessageBox.Show("Draw!");
-                turnCount = 0;
-                InitializeCells();
+                RestartGame();
             }
         }
         private void GameOver()
@@ -95,7 +98,7 @@ namespace TicTacToe
                 winner = "O";
             }
             MessageBox.Show(winner + " wins!");
-            InitializeCells();
+            RestartGame();
 
         }
        
