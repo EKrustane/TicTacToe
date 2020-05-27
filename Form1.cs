@@ -58,7 +58,7 @@ namespace TicTacToe
                 label.Text = "O";
             }
             turnCount++;
-            PlaySound();
+            PlaySound("Click");
             CheckForWin();
             CheckForDraw();
             xPlayerTurn = !xPlayerTurn;
@@ -125,10 +125,10 @@ namespace TicTacToe
             thirdLabel.BackColor = color;
         }
 
-        private void PlaySound()
+        private void PlaySound(string soundName)
         {
             {
-                System.IO.Stream str = Properties.Resources.Click;
+                System.IO.Stream str = (System.IO.Stream)Properties.Resources.ResourceManager.GetObject(soundName);
                 System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
                 snd.Play();
             }
