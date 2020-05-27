@@ -39,6 +39,7 @@ namespace TicTacToe
             {
                 labelName = "label" + i;
                 Grid.Controls[labelName].Text = string.Empty;
+                Grid.Controls[labelName].BackColor=Color.Transparent;
             }
         }
         private void Player_Click(object sender, EventArgs e)
